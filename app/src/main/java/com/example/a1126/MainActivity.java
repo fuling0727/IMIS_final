@@ -126,7 +126,9 @@ public class MainActivity extends AppCompatActivity {
     private View.OnClickListener bEventHead = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-
+            Intent intent = new Intent();
+            intent.setClass(MainActivity.this, Head_Page.class);
+            startActivity(intent);
         }
     };
     private View.OnClickListener bEventFace = new View.OnClickListener() {
@@ -427,6 +429,36 @@ public class MainActivity extends AppCompatActivity {
                 Log.d(TAG,convert[0]);
                 resultText.setText(convert[0]);
 
+                if(resultText.equals("頭"))
+                {
+                    Intent intent = new Intent();
+                    intent.setClass(MainActivity.this, Head_Page.class);
+                    startActivity(intent);
+                }
+                else if(resultText.equals("手"))
+                {
+                    Intent intent = new Intent();
+                    intent.setClass(MainActivity.this, HandFeet_Page.class);
+                    startActivity(intent);
+                }
+                else if(resultText.equals("腳"))
+                {
+                    Intent intent = new Intent();
+                    intent.setClass(MainActivity.this, HandFeet_Page.class);
+                    startActivity(intent);
+                }
+                else if(resultText.equals("臉"))
+                {
+                    Intent intent = new Intent();
+                    intent.setClass(MainActivity.this, Face_Page.class);
+                    startActivity(intent);
+                }
+                else if(resultText.equals("身"))
+                {
+                    Intent intent = new Intent();
+                    intent.setClass(MainActivity.this, Body_Page.class);
+                    startActivity(intent);
+                }
                 return;
             }
         }
